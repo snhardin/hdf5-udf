@@ -13,10 +13,10 @@ CXX            = g++
 OBJCOPY        = objcopy
 CXXFLAGS       = $(shell pkg-config --cflags luajit) \
                  $(shell python3-config --includes) \
-                 -fPIC -I. -Wall -O3 -g -ggdb
+                 -fPIC -I. -Wall -O3 -g -ggdb -I/usr/include/hdf5/serial/
 LDFLAGS        = $(shell pkg-config --libs luajit) \
                  $(shell python3-config --ldflags --embed) \
-                 -ldl -lm -lhdf5 -Wl,--no-undefined
+                 -ldl -lm -lhdf5_serial -Wl,--no-undefined -L/usr/lib/x86_64-linux-gnu/
 
 ALL_HEADERS    = $(wildcard *.h)
 COMMON_SOURCES = backend.cpp dataset.cpp

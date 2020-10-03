@@ -1,6 +1,6 @@
 CXX        = g++
-LDFLAGS    = -lhdf5
-CXXFLAGS   = -O3 -Wall
+LDFLAGS    = -lhdf5_serial -L/usr/lib/x86_64-linux-gnu/
+CXXFLAGS   = -O3 -Wall -I/usr/include/hdf5/serial/
 
 CREATE_BIN = createh5
 CREATE_SRC = createh5.cpp
