@@ -11,7 +11,6 @@ Architecture: any
 Multi-Arch: foreign
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: HDF5-UDF is a mechanism to dynamically generate HDF5 datasets through user-defined functions (UDFs) written in Lua, Python, or C/C++.
- 
  User-defined functions are compiled into executable form and the result is embedded into HDF5.
  A supporting library gives access to existing datasets from user code so that data analysis and
  derivation of other data can be produced.
